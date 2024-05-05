@@ -1,6 +1,6 @@
 {
   "name": "react-bemthis",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple utility for conditionally creating classes in BEM methodology, react compatible for scoped styles",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,9 +1,14 @@
 import classNames from "classnames";
 
 function autoDetectBlock(styles) {
-  const block = Object.keys(styles).find(
+  let block = Object.keys(styles).find(
     (className) => !className.includes("--") && !className.includes("__")
   );
+
+  if (!block) {
+    const firstProperty = Object.keys(styles)[0];
+    block = styles[firstProperty].split("__")[0].split("--")[0];
+  }
 
   if (!block) throw new Error("No block found, are you using BEM?");
 
