@@ -4,7 +4,7 @@
 //   Kevin Besset <https://github.com/kevbesset>
 type BEMBlock = string;
 type BEMElement = string;
-type BEMModifier = string | string[] | { [key: string]: unknown };
+type BEMModifier = string | BEMModifier[] | { [key: string]: unknown };
 
 type BEMResponse = {
   block: (modifiers?: BEMModifier) => string;

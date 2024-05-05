@@ -46,22 +46,26 @@ function bemify(block, element, modifiers) {
 
   classList.push(classElement);
 
+  applyModifiers(classElement, modifiers, classList);
+
+  return classList;
+}
+
+function applyModifiers(element, modifiers, classList) {
   if (modifiers) {
     if (typeof modifiers === "string") {
       modifiers.split(" ").forEach((mod) => {
-        classList.push(`${classElement}--${mod}`);
+        classList.push(`${element}--${mod}`);
       });
     } else if (Array.isArray(modifiers)) {
       modifiers.forEach((mod) => {
-        mod.split(" ").forEach((m) => {
-          classList.push(`${classElement}--${m}`);
-        });
+        applyModifiers(element, mod, classList);
       });
     } else if (typeof modifiers === "object") {
       Object.entries(modifiers).forEach(([key, value]) => {
         if (value) {
           key.split(" ").forEach((mod) => {
-            classList.push(`${classElement}--${mod}`);
+            classList.push(`${element}--${mod}`);
           });
         }
       });
@@ -69,6 +73,4 @@ function bemify(block, element, modifiers) {
       throw "Invalid type for modifiers";
     }
   }
-
-  return classList;
 }
