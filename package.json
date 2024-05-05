@@ -1,0 +1,36 @@
+{
+  "name": "react-bemthis",
+  "version": "1.0.0",
+  "description": "A simple utility for conditionally creating classes in BEM methodology, react compatible for scoped styles",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevbesset/react-bemthis.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "scss",
+    "class",
+    "className",
+    "classNames",
+    "classes",
+    "javascript",
+    "react",
+    "bem",
+    "getbem",
+    "bemthis",
+    "scoped"
+  ],
+  "author": "Kevin Besset",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevbesset/react-bemthis/issues"
+  },
+  "homepage": "https://github.com/kevbesset/react-bemthis#readme"
+}
