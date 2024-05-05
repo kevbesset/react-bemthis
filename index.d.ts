@@ -13,4 +13,7 @@ type BEMResponse = {
   e: (element: BEMElement, modifiers?: BEMModifier) => string;
 };
 
-export default function bem(styles: CSSModuleClasses): BEMResponse;
+export default function bem(
+  styles: CSSModuleClasses,
+  forceBlock?: string
+): BEMResponse;
