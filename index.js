@@ -7,10 +7,15 @@ function autoDetectBlock(styles) {
 
   if (!block) {
     const firstProperty = Object.keys(styles)[0];
-    block = firstProperty.split("__")[0].split("--")[0];
+    if (firstProperty) {
+      block = firstProperty.split("__")[0].split("--")[0];
+    }
   }
 
-  if (!block) throw new Error("No block found, are you using BEM?");
+  if (!block)
+    console.warn(
+      "No block found, are you using BEM?\n This may also be caused if your style file is empty"
+    );
 
   return block;
 }
